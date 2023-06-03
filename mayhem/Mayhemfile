@@ -1,0 +1,13 @@
+project: amqpprox
+
+# Target name (should be unique within the project)
+target: amqpprox
+
+# List of commands used to test the target
+cmds:
+
+  - cmd: /amqpprox --consoleVerbosity 0 --destinationDNS localhost --destinationPort 5672 --listenPort 5673
+    network:
+      url: tcp://localhost:5673
+      timeout: 2
+      client: false
